@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Le poeteur</title>
+</head>
+
+<body>
+<p id="mypoem"></p>
+    <script>
+
+   function rand_a_b(min, max)
+    {
+  		return Math.floor(Math.random() * (max - min) + min);
+	}
+    	var poemData = [
+    		[['Je laisse mon Magma', 'Sous la haute bifurcation', 'Sur les bourasque'],	['vogonesque', 'arabesque', 'caravagesque']],
+    		[['Embriculé loin de', 'Articulé depuis', 'Jufile sur'],				['la blatosphere', 'la litiere', 'l\'embarcardaire']],
+    		[['Dans la zone sontale', 'Sous les pres martial', 'Dans la lune basse'],  	['inifugé', 'limiboufé', 'articoté']],
+    		[['Par treize pourtours', 'Par des parcours', 'Vers les generateur'],			['calometrique', 'histarique', 'Artistique']],
+    		[[''],['']],
+    		[['Oh freddled', 'Les burgondin', 'Les virtisute', 'Ces martiquais'], ['gruntbuggly', 'mircondilys', 'mysterique', 'lurdigquant']],
+    		[['Les micturations de Thy', 'Les steroisade', 'Ces mistyfandandre'], ['sont à moi', 'grandissent bruissillement', 'distingue le vertisandre']],
+    		[['Comme plurdled', 'Sous les martinification'], ['gabbleblotchits', 'striduladits', 'pourifisit']],
+    		[['Sur une abeille de', 'Dans les flots du', 'Là où les stigates de'], ['flodibus', 'lurgid', 'fartigade', 'clirtallis']],
+    		[['Ce mordiously hath bitled', 'Ces youstricops utrilis', 'Le mourtisons yotilop'], ['deplacé', 'vendu', 'nistifé', 'nistilade', 'dehors', 'aliste']],
+    		[['Son earted des ', 'Sa kulista des', 'Mon butilis des'],['jartisaux', 'jurtles', 'rutilles', 'fillies']]
+    		]
+    	var poetry = "";
+    	for (var i = 0, c = poemData.length; i < c; i++)
+    	{
+    		for (var j = 0, d = poemData[i].length; j < d; j++)
+    		{
+    			poetry += poemData[i][j][rand_a_b(0, poemData[i][j].length)];
+    			if (poemData[i].length == j + 1)
+    				poetry += '<br />';
+    			else
+    				poetry += ' ';
+    		}
+    	}
+    	var paragraphe = document.getElementById('mypoem');
+
+    	paragraphe.innerHTML = poetry;
+    </script>
+
+</body>
+</html>
