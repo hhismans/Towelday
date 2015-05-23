@@ -7,13 +7,23 @@
 </head>
 
 <body>
-<p id="mypoem"></p>
-    <script>
 
-   function rand_a_b(min, max)
-    {
+	<div id="form-wrapper">
+		<div class="form">FORM1</div>
+		<div class="form">FORM2</div>
+		<div class="form">FORM3</div>
+		<div class="form">FORM4</div>
+	</div>
+
+	<div id="poem-wrapper">
+		<p id="mypoem"></p>	
+	</div>
+
+    <script>
+		function rand_a_b(min, max)
+    	{
   		return Math.floor(Math.random() * (max - min) + min);
-	}
+		}
     	var poemData = [
     		[['Je laisse mon Magma', 'Sous la haute bifurcation', 'Sur les bourasque'],	['vogonesque', 'arabesque', 'caravagesque']],
     		[['Embriculé loin de', 'Articulé depuis', 'Jufile sur'],				['la blatosphere', 'la litiere', 'l\'embarcardaire']],

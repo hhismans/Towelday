@@ -1,30 +1,44 @@
-body
+html
 {
-	background-color :black;
-    background: url('img/vogon.jpg');
-    background-repeat: repeat;
-    background-size: cover;
-    /*color: #181818;*/
-    /*border:solid blue;*/
-    min-width: 100px;
-    min-height: 500px;
-    max-width: 1060px;
-    max-height: 1440px;
-
-  margin: 1em auto;
-  width: 80%;
-  padding: 1em;
-  background-color: #ddd;
+	background: url('images/vogon.jpg') no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
 }
-p
+
+#form-wrapper
 {
-	opacity: 0.8;
-	padding : 5px;
-	color :white;
-	font-size: 25px;
-	display : inline-block;
+	margin-top: 20vh;
+	width: 100%;
+	margin-right: auto;	
 	margin-left: auto;
+	text-align: center;
+	border: 1px solid pink;
+}
+
+.form {
+	display: inline-block;
+	border: 1px solid red;
+	margin-left: 10px;
+}
+
+#poem-wrapper
+{
+	margin-top: 40vh;
+	border: 1px solid green;
 	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#mypoem
+{
+	display: inline-block;
+	margin-left: 50px;
 	background: grey;
 	border-radius: 10px;
+	color: white;
+	opacity: 0.8;
+	font-size: 25px;
+	padding: 25px;
 }
