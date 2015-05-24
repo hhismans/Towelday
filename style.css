@@ -16,6 +16,30 @@ html
 	border: 1px solid pink;
 }
 
+#gifVogondiv
+{
+	border :solid blue;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5vw;
+	height: 10vw;
+	text-align: center;
+	z-index: 1;
+	overflow: hidden;
+
+}
+
+#gifVogon
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 16%;
+	border-radius: 150px;
+	font-size: 25px;
+	padding-bottom: -5%;
+	z-index: 0;
+}
 .form {
 	display: inline-block;
 	border: 1px solid red;
