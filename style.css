@@ -6,6 +6,15 @@ html
 	width: 100%;
 }
 
+#speak, #bluebutton, #yellowbutton, #greenbutton
+{
+	visibility: hidden;
+}
+
+#speak img, #bluebutton img, #yellowbutton img, #greenbutton img
+{
+	visibility: visible;
+}
 #form-wrapper
 {
 	margin-top: 15vh;
@@ -13,9 +22,39 @@ html
 	margin-right: auto;	
 	margin-left: auto;
 	text-align: center;
-	border: 1px solid pink;
 }
-
+#formblue
+{
+	position: absolute;
+	left: 20%;
+	bottom: 15%;
+	width: 10%;
+	transform: rotatez(83deg) rotatey(67deg);
+}
+#formgreen
+{
+	position: absolute;
+	right: 34%;
+	bottom: 36%;
+	width: 5%;
+	transform: rotatez(-42deg) rotatey(-67deg);
+}
+#formpink
+{
+	position: absolute;
+	left: 37.5%;
+	bottom: 36%;
+	width: 5%;
+	transform: rotatez(42deg) rotatey(67deg);
+}
+#formyellow
+{
+	position: absolute;
+	right: 20%;
+	bottom: 15%;
+	width: 10%;
+	transform: rotatez(-83deg) rotatey(-67deg);
+}
 #gifVogondiv
 {
 	border :solid blue;
@@ -45,16 +84,18 @@ html
     width: 177px;
     background-size: 100%;
     background: url("./images/littlefish2.gif");
+    position: absolute;
+    bottom:0px;
+    right:0px;
 }
 
 .form {
 	width: 5%;
-	display: inline-block;
-	border: 1px solid red;
 	margin-left: 10px;
 }
 
 .form img{
+	border-radius: 1vw;
 	width: 100%;
 }
 

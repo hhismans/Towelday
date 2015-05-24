@@ -5,6 +5,10 @@
 /* GLOBALS */
 var button = document.getElementById('speak');
 var fishbutton = document.getElementById('fish');
+var bluebutton = document.getElementById('bluebutton');
+var yellowbutton = document.getElementById('yellowbutton');
+var greenbutton = document.getElementById('greenbutton');
+
 var count = 0;
 var poetry = ["", "", ""];
 var whichvoice = "Boing";
@@ -101,4 +105,16 @@ fishbutton.addEventListener('click', function(e) {
 	if (document.getElementById('mypoem').innerHTML.length > 0) {
 		speak();
 	}
+});
+
+bluebutton.addEventListener('click', function(e) {
+	alert("Ceci est un formulaire presidentielle de demande en liberté. Revenez quand vous serez président de la galaxie.");
+});
+
+yellowbutton.addEventListener('click', function(e) {
+	alert("Les formulaires de demande de generation de poeme sont rose humain.");
+});
+
+greenbutton.addEventListener('click', function(e) {
+	alert("Tiens, vous avez toujours votre jambe ? Vous n'avez aucun besoin de ce formulaire.");
 });
