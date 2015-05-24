@@ -3,16 +3,16 @@
 <head>
     <script>
         var msg = new SpeechSynthesisUtterance();
-        msg.text = poetry[count];
         msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Boing'; })[0];</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="style.css" type="text/css"/>
+
     <title>Le poeteur</title>
 </head>
 
 <body>
 	<div id="form-wrapper">
-		<div class="form">FORM1</div>
+		<div class="form"><img src="./images/form_blue.jpg"></div>
 		<div class="form">FORM2</div>
 		<div class="form">FORM3</div>
 		<div class="form">FORM4</div>
@@ -24,7 +24,8 @@
 		</div>	
 	</div>
     <button id="speak" >generer un poeme</button>
-    <button id="fish" ></button>
+    <button id="fish" onclick=""></button>
+
     <script src="./poeme.js"></script>
 </body>
 </html>

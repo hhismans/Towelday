@@ -4,8 +4,12 @@
 
 /* GLOBALS */
 var button = document.getElementById('speak');
+var fishbutton = document.getElementById('fish');
 var count = 0;
 var poetry = ["", "", ""];
+var whichvoice = "Boing";
+var whichlang = "en-US";
+
 
 function rand_a_b(min, max)
 {
@@ -51,9 +55,10 @@ function speak() {
 	msg.volume = parseFloat(0.9);
 	msg.rate = parseFloat(0.8);
 	msg.pitch = parseFloat(0.5);
-	msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Boing'; })[0];
+	msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == whichvoice; })[0];
+	msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == whichvoice; })[0];
     msg.text = poetry[count];
-	msg.lang = 'fr-FR';
+	msg.lang = whichlang;
 	msg.text = msg.text.replace(/\<br \/\>/g, ", ");
 	window.speechSynthesis.speak(msg);
 	msg.onstart = function(event) {
@@ -69,13 +74,30 @@ function speak() {
 	};
 }
 
-
 button.addEventListener('click', function(e){
 	window.speechSynthesis.cancel();
     var paragraphe = document.getElementById('mypoem').innerHTML = "";
 	poetry = ["", "", ""];
 	count = 0;
 	generatePoem();
+	if (document.getElementById('mypoem').innerHTML.length > 0) {
+		speak();
+	}
+	var element = document.getElementById('poem-wrapper-content');
+	element.addEventListener('click,', function(e) {
+		e.preventDefault;
+		element.classList.remove("run-animation");
+		element.offsetWidth = element.offsetWidth;
+		element.classList.add('run-animation');
+	}, false);
+});
+
+fishbutton.addEventListener('click', function(e) {
+	window.speechSynthesis.cancel();
+	whichvoice = "Google Français";
+	whichlang = "fr-FR";
+	document.getElementsByTagName('body')[0].removeChild(fishbutton);
+	//fishbutton.style.visibility = hidden;
 	if (document.getElementById('mypoem').innerHTML.length > 0) {
 		speak();
 	}
