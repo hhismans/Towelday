@@ -46,7 +46,7 @@ function speak() {
     msg.rate = parseFloat(0.8);
     msg.pitch = parseFloat(0.5);
     msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google Français'; })[0];
-    msg.voice.lang = 'fr-FR';
+    msg.lang = 'fr-FR';
     msg.text = msg.text.replace(/\<br\>/g, ", ");
     window.speechSynthesis.speak(msg);
     console.log(msg.voice);
