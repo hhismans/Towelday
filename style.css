@@ -47,7 +47,7 @@ html
 {
 	position: absolute;
 	width: 18em;
-	height: 75%;
+	height: 100%;
 	bottom: 0;
 	left: 50%;
 	margin-left: -9em;
@@ -64,15 +64,15 @@ html
 #poem-wrapper-content
 {
 	position: absolute;
-	top: 100%;
-	animation: scroll 10s linear 1s infinite;
-	-webkit-animation: scroll 10s linear 1s infinite;
+    top:100px;
+	animation: scroll 20s linear 1s 1;
+	-webkit-animation: scroll 20s linear 1s 1;
 }
 
 @-webkit-keyframes scroll
 {
-	0% { top: 100%; }
-	100% { top: -70%; }
+    0% { top:900px; }
+    100% { top: 100px; }
 }
 
 @keyframes scroll

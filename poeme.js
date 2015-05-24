@@ -69,7 +69,9 @@ function speak() {
 	};
 }
 
-button.addEventListener('click', function(e) {
+button.addEventListener('click', function(e){
+
+   // void window.location.reload();
 	window.speechSynthesis.cancel();
 	var paragraphe = document.getElementById('mypoem').innerHTML = "";
 	poetry = ["", "", ""];
