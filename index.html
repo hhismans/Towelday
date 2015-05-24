@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+        var msg = new SpeechSynthesisUtterance();
+        msg.text = poetry[count];
+        msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Boing'; })[0];</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="style.css" type="text/css"/>
     <title>Le poeteur</title>
@@ -14,16 +18,13 @@
 		<div class="form">FORM4</div>
 	</div>
 
-	<div id="gifVogondiv">
-		<img id="gifVogon" src="./images/vogonPoem.gif" >
-	</div>
 	<div id="poem-wrapper">
 		<div id="poem-wrapper-content">
 			<p id="mypoem" class="run-animation"></p>
 		</div>	
 	</div>
     <button id="speak" >generer un poeme</button>
-
+    <button id="fish" ></button>
     <script src="./poeme.js"></script>
 </body>
 </html>

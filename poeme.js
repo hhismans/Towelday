@@ -20,7 +20,7 @@ var poemData = [
 	[['Par treize pourtours', 'Par des parcours', 'Vers les generateur'],            ['calometrique', 'histarique', 'Artistique']],
 
 	[['Oh freddled', 'Les burgondin', 'Les virtisute', 'Ces martiquais'], ['gruntbuggly', 'mircondilys', 'mysterique', 'lurdigquant']],
-	[['Les micturations de Thy', 'Les steroisade', 'Ces mistyfandandre'], ['sont à moi', 'grandissent bruissillement', 'distingue le vertisandre']],
+	[['Les micturations de Thy', 'Les steroisade', 'Ces mistyfandandre'], ['sont à moi', 'grandissent','bruissille', 'le vertisandre']],
 	[['Comme plurdled', 'Sous les martinification'], ['gabbleblotchits', 'striduladits', 'pourifisit']],
 	[['Sur une abeille de', 'Dans les flots du', 'Là où les stigates de'], ['flodibus', 'lurgid', 'fartigade', 'clirtallis']],
 
@@ -48,11 +48,11 @@ paragraphe.innerHTML = poetry[0] + '<br \>' + poetry[1] + '<br \>' + poetry[2];
 
 function speak() {
 	var msg = new SpeechSynthesisUtterance();
-	msg.text = poetry[count];
 	msg.volume = parseFloat(0.9);
 	msg.rate = parseFloat(0.8);
 	msg.pitch = parseFloat(0.5);
-	msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google Français'; })[0];
+	msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Boing'; })[0];
+    msg.text = poetry[count];
 	msg.lang = 'fr-FR';
 	msg.text = msg.text.replace(/\<br \/\>/g, ", ");
 	window.speechSynthesis.speak(msg);
@@ -69,11 +69,10 @@ function speak() {
 	};
 }
 
-button.addEventListener('click', function(e){
 
-   // void window.location.reload();
+button.addEventListener('click', function(e){
 	window.speechSynthesis.cancel();
-	var paragraphe = document.getElementById('mypoem').innerHTML = "";
+    var paragraphe = document.getElementById('mypoem').innerHTML = "";
 	poetry = ["", "", ""];
 	count = 0;
 	generatePoem();

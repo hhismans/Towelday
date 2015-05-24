@@ -1,6 +1,6 @@
 html
 {
-	background: url('images/vogon.jpg') no-repeat center center fixed;
+	background: url('./images/background.gif') no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
@@ -37,6 +37,16 @@ html
 	font-size: 25px;
 	padding-bottom: -5%;
 }
+
+#fish
+{
+    border:none;
+    height: 100px;
+    width: 177px;
+    background-size: 100%;
+    background: url("./images/littlefish2.gif");
+}
+
 .form {
 	display: inline-block;
 	border: 1px solid red;
@@ -64,19 +74,27 @@ html
 #poem-wrapper-content
 {
 	position: absolute;
-    top:100px;
+    top:0%;
 	animation: scroll 20s linear 1s 1;
 	-webkit-animation: scroll 20s linear 1s 1;
 }
 
+#poem-wrapper-content p {
+    padding: 25px;
+    border-radius: 25px;
+    opacity: 0.8;
+    background-color: #D9C4B3;
+
+}
+
 @-webkit-keyframes scroll
 {
-    0% { top:900px; }
-    100% { top: 100px; }
+    0% { top:100%; }
+    100% { top:-0%; }
 }
 
 @keyframes scroll
 {
 	0% { top: 100%; }
-	100% { top: -70%; }
+	100% { top: -0%; }
 }
